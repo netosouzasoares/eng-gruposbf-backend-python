@@ -1,13 +1,14 @@
 from flask import Flask, request
 
 from converter.config_handler import config_handler
+import converter.api as awesomeapi
 
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/healthcheck', methods=['GET'])
 def healthcheck():
-    return 'App running', 200
+    return 'app running', 200
 
 
 @app.route('/converter', methods=['POST'])
@@ -25,8 +26,13 @@ def converter():
 def orchestrator(data):
     price = data['price']
 
+    bid_values = awesomeapi.get_coins_values()
+
+    if not bid_values:
+       return 'Internal Error', 500
+
     return {
-        'USD': config_handler['USD'](price),
-        'EUR': config_handler['EUR'](price),
-        'INR': config_handler['INR'](price)
+        'USD': config_handler['USD'](price, bid_values['USD']),
+        'EUR': config_handler['EUR'](price, bid_values['EUR']),
+        'INR': config_handler['INR'](price, bid_values['INR'])
     }, 200
