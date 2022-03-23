@@ -1,0 +1,2 @@
+[default]
+awesomea_api = 'https://economia.awesomeapi.com.br/last/USD,EUR,INR'
