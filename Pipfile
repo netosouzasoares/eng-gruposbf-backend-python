@@ -4,13 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
-flake8 = "*"
-pytest = "*"
-pytest-cov = "*"
-requests = "*"
-babel = "*"
-mock = "*"
+flask = "==2.0.3"
+flake8 = "==4.0.1"
+pytest = "==7.1.1"
+pytest-cov = "==3.0.0"
+requests = "==2.27.1"
+mock = "==4.0.3"
+toml = "==0.10.2"
+dynaconf = "==3.1.7"
+setuptools = "==60.10.0"
+flasgger = "==0.9.5"
 
 [dev-packages]
 

@@ -1,12 +1,13 @@
+import logging
 from urllib.error import HTTPError
 import requests
-
+from dynaconf import settings
+import logging
 
 def get_coins_values():
 
     try:
-        # TODO: set url on config
-        result = requests.get('https://economia.awesomeapi.com.br/last/USD,EUR,INR')
+        result = requests.get(settings['awesomea_pi'])
         response = result.json()
         return {
             'USD': float(response['USDBRL']['bid']),
@@ -14,6 +15,5 @@ def get_coins_values():
             'INR': float(response['INRBRL']['bid'])
         }
     except HTTPError:
-        # TODO: add logger here
-        print('error to get values from awesomeapi')
+        logging.error('get error from awesomeapi')
         return None

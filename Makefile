@@ -15,3 +15,6 @@ env:
 
 install:
 	pipenv install
+
+shell:
+	pipenv shell
