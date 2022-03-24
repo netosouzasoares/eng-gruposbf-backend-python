@@ -38,12 +38,9 @@ Now you can see swagger at: http://127.0.0.1:5000/apidocs/
 
 ## Application Checklist
 
- - [] [Code Quality](link to the code quality tool sonar e etc..)
- - [] [New Relic/DataDog]()
  - [X] [CD](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
  - [X] [CI](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
  - [X] [Docker](https://hub.docker.com/repository/docker/neto123/converter)
- - [] [Sentry] ()
 
 TODO: Implement.
 
@@ -118,3 +115,18 @@ To edit use https://www.draw.io/ and open docs/architecture.xml
 ## How Contribute
 
 See the [opened issues](https://github.com/netosouzasoares/eng-gruposbf-backend-python/issues)
+
+
+## Performance Tests
+
+We used the lib https://locust.io to a simple test running our app on minikube locally
+
+![result](/scripts/result/report_1648139919.9923043.html)
+
+
+## How to execute performance test
+
+1. Run app locally or deploy on minikube as `How to deploy to kubernetes`
+2. Create a virtualenv to running performance tests
+3. Execute the command: `pip3 install locust`
+4. Navigate to /scripts and then execute command: `locust`, the webpage will open, so you can configure your test

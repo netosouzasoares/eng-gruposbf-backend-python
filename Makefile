@@ -20,4 +20,4 @@ dev-install:
 	pipenv install --dev
 
 docker-build:
-	docker build -f Dockerfile .
+	docker build -t neto123/converter:latest -f Dockerfile .
