@@ -1,8 +1,9 @@
-import logging
 from urllib.error import HTTPError
-import requests
 from dynaconf import settings
+
 import logging
+import requests
+
 
 def get_coins_values():
 
