@@ -1,8 +1,16 @@
+import sentry_sdk
+
 from flask import Flask, request
 from flask_swagger_ui import get_swaggerui_blueprint
 
 from converter.config_handler import config_handler
+from converter.utils import get_settings
 import converter.api as awesomeapi
+
+settings = get_settings()
+
+if settings['env'].lower() == 'prod':
+    sentry_sdk.init(settings['dns_sentry'])
 
 app = Flask(__name__)
 

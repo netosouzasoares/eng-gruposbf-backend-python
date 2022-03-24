@@ -41,8 +41,10 @@ Now you can see swagger at: http://127.0.0.1:5000/swagger/
  - [X] [CD](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
  - [X] [CI](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
  - [X] [Docker](https://hub.docker.com/repository/docker/neto123/converter)
+ - [X] [Sentry] (https://sentry.io/organizations/neto-nq/projects/converter/?project=6275976)
+ - [X] [NewRelic] (https://one.newrelic.com/nr1-core/apm-nerdlets/overview/MzQ1NzI0NnxBUE18QVBQTElDQVRJT058MTEzMDAyNzg1MA?account=3457246)
 
-TODO: Implement.
+ OBS: sentry and newrelic are private and i am using my account... if you want i can show to you
 
 ## Lint
 

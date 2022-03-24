@@ -1,2 +1,7 @@
 [default]
 awesomea_api = 'https://economia.awesomeapi.com.br/last/USD,EUR,INR'
+env = 'qa'
+
+[production]
+env = 'prod'
+dns_sentry = 'https://470cd4fea0854789b5aa8fe042f0d3a2@o1177149.ingest.sentry.io/6275976'
