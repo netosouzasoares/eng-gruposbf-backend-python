@@ -32,7 +32,7 @@
         .download a {
             color: #00ca5a;
         }
-        
+
         /* tables.css */
 table.stats {
   width: 100%;
@@ -118,7 +118,7 @@ table.stats tr.total td {
         <h1>Locust Test Report</h1>
 
         <div class="info">
-            
+
             <p>During: <span class="l10n datetime">2022-03-24 16:34:12</span> - <span class="l10n datetime">2022-03-24 16:42:01</span></p>
             <p>Target Host: <span>http://192.168.49.2:32176</span></p>
             <p>Script: <span>locustfile.py</span></p>
@@ -142,7 +142,7 @@ table.stats tr.total td {
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                         <tr>
                             <td>POST</td>
                             <td>/converter</td>
@@ -155,7 +155,7 @@ table.stats tr.total td {
                             <td>40.5</td>
                             <td>0.0</td>
                         </tr>
-                    
+
                         <tr class="total">
                             <td></td>
                             <td>Aggregated</td>
@@ -168,7 +168,7 @@ table.stats tr.total td {
                             <td>40.5</td>
                             <td>0.0</td>
                         </tr>
-                    
+
                 </tbody>
             </table>
         </div>
@@ -191,7 +191,7 @@ table.stats tr.total td {
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                         <tr>
                             <td>POST</td>
                             <td>/converter</td>
@@ -204,7 +204,7 @@ table.stats tr.total td {
                             <td>76000</td>
                             <td>81000</td>
                         </tr>
-                    
+
                         <tr class="total">
                             <td></td>
                             <td>Aggregated</td>
@@ -217,12 +217,12 @@ table.stats tr.total td {
                             <td>76000</td>
                             <td>81000</td>
                         </tr>
-                    
+
                 </tbody>
             </table>
         </div>
 
-        
+
             <div class="failures">
                 <h2>Failures Statistics</h2>
                 <table class="stats">
@@ -235,39 +235,39 @@ table.stats tr.total td {
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                             <tr>
                                 <td>POST</td>
                                 <td>/converter</td>
                                 <td>Remote end closed connection without response</td>
                                 <td>1</td>
                             </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
-        
 
-        
 
-        
+
+
+
             <div class="charts-container">
                 <h2>Charts</h2>
             </div>
-        
+
 
         <div id="tasks">
             <h2>Final ratio</h2>
             <div class="tasks" data-tasks="{&quot;per_class&quot;: {&quot;Converter&quot;: {&quot;ratio&quot;: 1.0, &quot;tasks&quot;: {&quot;send_conversions&quot;: {&quot;ratio&quot;: 1.0}}}}, &quot;total&quot;: {&quot;Converter&quot;: {&quot;ratio&quot;: 1.0, &quot;tasks&quot;: {&quot;send_conversions&quot;: {&quot;ratio&quot;: 1.0}}}}}"></div>
         </div>
-    
+
     </div>
 
-    
-    
-    
-    
-    
+
+
+
+
+
     <script>
         // jquery-1.11.3.min.js
 /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
@@ -351,11 +351,11 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
             this.container = $(container);
             this.title = title;
             this.lines = lines;
-            
+
             this.element = $('<div class="chart"></div>').css("width", "100%").appendTo(container);
             this.data = [];
             this.dates = [];
-            
+
             var seriesData = [];
             for (var i=0; i<lines.length; i++) {
                 seriesData.push({
@@ -367,7 +367,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
                 });
                 this.data.push([]);
             }
-            
+
             this.chart = echarts.init(this.element[0], 'vintage');
             this.chart.setOption({
                 legend: {
@@ -447,7 +447,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
                 }
             })
         }
-        
+
         addValue(values, user_count=0) {
             this.dates.push(new Date().toLocaleTimeString());
             var seriesData = [];
@@ -463,7 +463,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
                 series: seriesData
             });
         }
-        
+
         resize() {
             this.chart.resize();
         }
@@ -528,7 +528,7 @@ function fillTasksFromRequest() {
     </script>
 
     <script>
-        
+
 var stats_history = {
     "time": ["16:34:16", "16:34:21", "16:34:26", "16:34:31", "16:34:36", "16:34:41", "16:34:46", "16:34:51", "16:34:56", "16:35:01", "16:35:06", "16:35:11", "16:35:16", "16:35:21", "16:35:26", "16:35:31", "16:35:36", "16:35:41", "16:35:46", "16:35:51", "16:35:56", "16:36:01", "16:36:06", "16:36:11", "16:36:16", "16:36:21", "16:36:26", "16:36:31", "16:36:36", "16:36:41", "16:36:46", "16:36:51", "16:36:56", "16:37:01", "16:37:06", "16:37:11", "16:37:16", "16:37:21", "16:37:26", "16:37:31", "16:37:36", "16:37:41", "16:37:46", "16:37:51", "16:37:56", "16:38:01", "16:38:06", "16:38:11", "16:38:16", "16:38:21", "16:38:26", "16:38:31", "16:38:36", "16:38:41", "16:38:46", "16:38:51", "16:38:56", "16:39:01", "16:39:06", "16:39:11", "16:39:16", "16:39:21", "16:39:26", "16:39:31", "16:39:36", "16:39:41", "16:39:46", "16:39:51", "16:39:56", "16:40:01", "16:40:06", "16:40:11", "16:40:16", "16:40:21", "16:40:26", "16:40:31", "16:40:36", "16:40:41", "16:40:46", "16:40:51", "16:40:56", "16:41:01", "16:41:06", "16:41:11", "16:41:16", "16:41:21", "16:41:26", "16:41:31", "16:41:36", "16:41:41", "16:41:46", "16:41:51", "16:41:56", "16:42:01"].map(server_time => new Date(new Date().setUTCHours(...(server_time.split(":")))).toLocaleTimeString()),
     "user_count": [{"value": 10}, {"value": 20}, {"value": 30}, {"value": 40}, {"value": 50}, {"value": 60}, {"value": 70}, {"value": 80}, {"value": 90}, {"value": 100}, {"value": 110}, {"value": 120}, {"value": 130}, {"value": 140}, {"value": 150}, {"value": 160}, {"value": 170}, {"value": 180}, {"value": 190}, {"value": 200}, {"value": 210}, {"value": 220}, {"value": 230}, {"value": 240}, {"value": 250}, {"value": 260}, {"value": 270}, {"value": 280}, {"value": 290}, {"value": 298}, {"value": 308}, {"value": 318}, {"value": 328}, {"value": 338}, {"value": 348}, {"value": 358}, {"value": 368}, {"value": 378}, {"value": 388}, {"value": 398}, {"value": 408}, {"value": 418}, {"value": 428}, {"value": 438}, {"value": 448}, {"value": 458}, {"value": 468}, {"value": 478}, {"value": 488}, {"value": 498}, {"value": 508}, {"value": 518}, {"value": 528}, {"value": 538}, {"value": 548}, {"value": 558}, {"value": 568}, {"value": 578}, {"value": 588}, {"value": 598}, {"value": 608}, {"value": 618}, {"value": 628}, {"value": 638}, {"value": 648}, {"value": 658}, {"value": 668}, {"value": 678}, {"value": 688}, {"value": 698}, {"value": 708}, {"value": 718}, {"value": 728}, {"value": 738}, {"value": 748}, {"value": 758}, {"value": 768}, {"value": 778}, {"value": 788}, {"value": 798}, {"value": 808}, {"value": 818}, {"value": 828}, {"value": 838}, {"value": 848}, {"value": 858}, {"value": 868}, {"value": 878}, {"value": 888}, {"value": 898}, {"value": 908}, {"value": 918}, {"value": 928}, {"value": 938}],
