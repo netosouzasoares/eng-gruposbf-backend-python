@@ -1,5 +1,5 @@
-name: CI Test
-on: [push]
+name: Main Flow
+on: [push, pull_request]
 
 jobs:
   run_tests:
