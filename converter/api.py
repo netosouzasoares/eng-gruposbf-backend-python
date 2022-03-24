@@ -1,13 +1,14 @@
-import logging
 from urllib.error import HTTPError
-import requests
 from dynaconf import settings
+
 import logging
+import requests
+
 
 def get_coins_values():
 
     try:
-        result = requests.get(settings['awesomea_pi'])
+        result = requests.get(settings['awesomea_api'])
         response = result.json()
         return {
             'USD': float(response['USDBRL']['bid']),

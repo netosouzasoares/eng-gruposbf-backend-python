@@ -15,6 +15,7 @@ def test_shoud_convert_from_real_to_inr():
     result = handler.inr(10, 0.063)
     assert result == '158.73'
 
+
 def test_should_format_price():
     result = handler.format_value(10.12121212)
     assert result == '10.12'

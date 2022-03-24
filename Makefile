@@ -1,20 +1,26 @@
 lint:
-	flake8 .
+	pipenv run flake8 .
 
 cov:
-	pytest --cov-fail-under 75 --cov converter
+	pipenv run pytest --cov-fail-under 68 --cov converter
 
 test:
-	pytest
+	pipenv run pytest
 
 run-dev:
 	FLASK_ENV=development FLASK_APP=app.py flask run
-
-env:
-	pipenv shell
 
 install:
 	pipenv install
 
 shell:
 	pipenv shell
+
+dev-install:
+	pipenv install --dev
+
+docker-build:
+	docker build -t sbf/converter:v0.0.1 -f Dockerfile .
+
+docker-run:
+	docker run -p 5000:5000 sbf/converter:v0.0.1

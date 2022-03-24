@@ -9,7 +9,6 @@ Converter API...
 - convert from REAL to USD,EUR and INR
 - can have many conversions
 
-
 # Built With
 
 - [Python](https://www.python.org/) 3.9
@@ -19,21 +18,20 @@ Converter API...
 - [flasgger](https://github.com/rochacbruno/flasgger) 0.9.5
 - [awesomeapi](https://docs.awesomeapi.com.br)
 
-
 # Run development
 
 We are using pipenv as repository, if you don't have, see: https://pipenv.pypa.io/en/latest/
 
 Install all dependencies (`make install`) and run the command:
 
-```
-make run-dev
-```
-
 After that you need active virtual env, run the command:
 
 ```
 make shell
+```
+
+```
+make run-dev
 ```
 
 Now you can see swagger at: http://127.0.0.1:5000/apidocs/
@@ -43,7 +41,7 @@ Now you can see swagger at: http://127.0.0.1:5000/apidocs/
  - [] [Code Quality](link to the code quality tool sonar e etc..)
  - [] [New Relic/DataDog]()
  - [] [CD]()
- - [] [CI]()
+ - [] [CI](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
  - [] [Docker]()
  - [] [Sentry] ()
 
@@ -74,6 +72,19 @@ make cov
 ```
 
 
+## Build and Run Docker
+
+Run command:
+
+```
+make docker-build
+```
+
+```
+make docker-run
+```
+
+
 ##  Model examples to requests
 
 ```
@@ -94,3 +105,8 @@ To edit use https://www.draw.io/ and open docs/architecture.xml
 ## How to Deploy:
 
 TODO: explain how deploy on k8s
+
+
+## How Contribute
+
+See the [opened issues](https://github.com/netosouzasoares/eng-gruposbf-backend-python/issues)

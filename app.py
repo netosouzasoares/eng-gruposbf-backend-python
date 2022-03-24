@@ -7,6 +7,7 @@ import converter.api as awesomeapi
 app = Flask(__name__)
 swagger = Swagger(app)
 
+
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():
     """Endpoint to healthcheck
@@ -49,7 +50,7 @@ def orchestrator(data):
     bid_values = awesomeapi.get_coins_values()
 
     if not bid_values:
-       return 'Internal Error', 500
+        return 'Internal Error', 500
 
     return {
         'USD': config_handler['USD'](price, bid_values['USD']),
