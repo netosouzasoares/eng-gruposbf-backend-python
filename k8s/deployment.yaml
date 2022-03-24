@@ -1,0 +1,58 @@
+## POD
+apiVersion: v1
+kind: Pod
+metadata:
+  name: converter
+spec:
+  containers:
+    - image: neto123/converter:${TAG}
+      name: converter
+      imagePullPolicy: Always
+      resources: {}
+      ports:
+        - containerPort: 5000
+---
+# Deployment Converter
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: converter
+  name: converter
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: converter
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: converter
+    spec:
+      containers:
+      - image: neto123/converter:${TAG}
+        name: converter
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 5000
+status: {}
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: converter
+  labels:
+    run: converter
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+  selector:
+    app: converter
+  type: NodePort
+---

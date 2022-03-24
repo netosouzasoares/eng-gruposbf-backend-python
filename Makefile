@@ -20,7 +20,4 @@ dev-install:
 	pipenv install --dev
 
 docker-build:
-	docker build -t sbf/converter:v0.0.1 -f Dockerfile .
-
-docker-run:
-	docker run -p 5000:5000 sbf/converter:v0.0.1
+	docker build -f Dockerfile .

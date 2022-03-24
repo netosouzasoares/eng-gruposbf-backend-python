@@ -40,9 +40,9 @@ Now you can see swagger at: http://127.0.0.1:5000/apidocs/
 
  - [] [Code Quality](link to the code quality tool sonar e etc..)
  - [] [New Relic/DataDog]()
- - [] [CD]()
- - [] [CI](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
- - [] [Docker]()
+ - [X] [CD](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
+ - [X] [CI](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
+ - [X] [Docker](https://hub.docker.com/repository/docker/neto123/converter)
  - [] [Sentry] ()
 
 TODO: Implement.
@@ -80,10 +80,7 @@ Run command:
 make docker-build
 ```
 
-```
-make docker-run
-```
-
+and then run with `docker run {IMAGE NAME}`
 
 ##  Model examples to requests
 
@@ -104,8 +101,19 @@ To edit use https://www.draw.io/ and open docs/architecture.xml
 
 ## How to Deploy:
 
-TODO: explain how deploy on k8s
+1. Create a PR with your changes
+2. Merge to master after approve and build
+3. Create a release on github, after that github actions will push image to dockerhub (now image is public to tests, but to internal company we can create a private repository on dockerhub/ecr e etc...)
 
+
+## How to deploy to kubernetes (using minikube to tests)
+
+1. Execute steps on how to deploy
+2. Replace TAG on files deployment on k8s folder
+3. Start minikube: https://minikube.sigs.k8s.io/docs/start/
+4. Execute the command on folder k8s `minikube kubectl -- apply  -f deployment.yaml`
+5. Expose service with command: `minikube service converter`
+6. Access route /apidocs to see app
 
 ## How Contribute
 
