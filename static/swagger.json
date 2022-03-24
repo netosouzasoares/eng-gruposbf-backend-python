@@ -1,0 +1,103 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "description": "converter",
+      "version": "1.0.0",
+      "title": "Converter",
+      "contact": {
+        "email": "netosouzasoares11@gmail.com"
+      }
+    },
+    "servers": [
+        {
+          "url": "/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Convertions",
+          "description": "Example API for requesting and return values converted"
+        }
+      ],
+      "paths": {
+        "/converter": {
+          "post": {
+            "tags": [
+              "Convertions Request"
+            ],
+            "summary": "Convert from Real to USD,EUR and INR",
+            "requestBody": {
+              "description": "Convert Request Post Object",
+              "required": true,
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/RequestPostBody"
+                  }
+                }
+              }
+            },
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "OK",
+                "schema": {
+                  "$ref": "#/components/schemas/ResponsePostBody"
+                }
+              },
+              "400": {
+                "description": "Body is required"
+              }
+            }
+          }
+        },
+        "/healthcheck": {
+            "get": {
+              "tags": [
+                "Healthcheck"
+              ],
+              "summary": "Check if app is running",
+              "produces": [
+                "application/json"
+              ],
+              "responses": {
+                "200": {
+                  "description": "OK"
+                }
+              }
+            }
+          }
+      },
+    "components": {
+        "schemas": {
+          "RequestPostBody": {
+            "type": "object",
+            "properties": {
+              "price": {
+                "type": "number",
+                "format": "number"
+              }
+            }
+          },
+          "ResponsePostBody": {
+            "type": "object",
+            "properties": {
+              "EUR": {
+                "type": "number",
+                "format": "number"
+              },
+              "USD": {
+                "type": "number",
+                "format": "number"
+              },
+              "INR": {
+                "type": "number",
+                "format": "number"
+              }
+            }
+          }
+        }
+      }
+}

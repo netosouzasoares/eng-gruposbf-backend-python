@@ -15,7 +15,7 @@ Converter API...
 - [Flask](http://flask.pocoo.org/) 2.0.3
 - [Flake8](http://flake8.pycqa.org/en/latest/) 4.0.1
 - [dynaconf](https://github.com/rochacbruno/dynaconf) 3.1.7
-- [flasgger](https://github.com/rochacbruno/flasgger) 0.9.5
+- [flask-swagger-ui](https://github.com/sveint/flask-swagger-ui) 3.36.0
 - [awesomeapi](https://docs.awesomeapi.com.br)
 
 # Run development
@@ -34,7 +34,7 @@ make shell
 make run-dev
 ```
 
-Now you can see swagger at: http://127.0.0.1:5000/apidocs/
+Now you can see swagger at: http://127.0.0.1:5000/swagger/
 
 ## Application Checklist
 
@@ -115,6 +115,9 @@ To edit use https://www.draw.io/ and open docs/architecture.xml
 ## How Contribute
 
 See the [opened issues](https://github.com/netosouzasoares/eng-gruposbf-backend-python/issues)
+
+
+If you create a new route or change please, update docs to swagger
 
 
 ## Performance Tests
