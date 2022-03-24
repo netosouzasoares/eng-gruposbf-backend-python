@@ -9,7 +9,6 @@ Converter API...
 - convert from REAL to USD,EUR and INR
 - can have many conversions
 
-
 # Built With
 
 - [Python](https://www.python.org/) 3.9
@@ -18,7 +17,6 @@ Converter API...
 - [dynaconf](https://github.com/rochacbruno/dynaconf) 3.1.7
 - [flasgger](https://github.com/rochacbruno/flasgger) 0.9.5
 - [awesomeapi](https://docs.awesomeapi.com.br)
-
 
 # Run development
 
@@ -43,7 +41,7 @@ Now you can see swagger at: http://127.0.0.1:5000/apidocs/
  - [] [Code Quality](link to the code quality tool sonar e etc..)
  - [] [New Relic/DataDog]()
  - [] [CD]()
- - [] [CI]()
+ - [] [CI](https://github.com/netosouzasoares/eng-gruposbf-backend-python/actions)
  - [] [Docker]()
  - [] [Sentry] ()
 
