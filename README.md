@@ -26,14 +26,14 @@ We are using pipenv as repository, if you don't have, see: https://pipenv.pypa.i
 
 Install all dependencies (`make install`) and run the command:
 
-```
-make run-dev
-```
-
 After that you need active virtual env, run the command:
 
 ```
 make shell
+```
+
+```
+make run-dev
 ```
 
 Now you can see swagger at: http://127.0.0.1:5000/apidocs/
