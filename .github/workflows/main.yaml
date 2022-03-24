@@ -27,7 +27,7 @@ jobs:
         run: make test
       - name: cov
         run: make cov
-  build:
+  docker_build:
     name: "Docker build"
     runs-on: ubuntu-18.04
     needs: run_tests
@@ -36,5 +36,46 @@ jobs:
         with:
           python-version: '3.9'
       - uses: actions/checkout@v3
+      - uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: docker build
         run: make docker-build
+      - run: mkdir -p docker-cache && docker save -o docker-cache/converter.tar neto123/converter:latest
+      - name: "Determine tag"
+        if: "startsWith(github.ref, 'refs/tags/v')"
+        id: "determine-tag"
+        run: "echo \"::set-output name=tag::${GITHUB_REF#refs/tags/}\""
+      - uses: actions/cache@v2
+        if: "startsWith(github.ref, 'refs/tags/v')"
+        with:
+          path: |
+            docker-cache
+          key: ${{ runner.os }}-docker-cache-${{ steps.determine-tag.outputs.tag }}
+  docker_push:
+    name: "Docker Push"
+    needs:
+      - run_tests
+      - docker_build
+    if: "startsWith(github.ref, 'refs/tags/v')"
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - uses: actions/checkout@v3
+      - uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: "Determine tag"
+        id: "determine-tag"
+        run: "echo \"::set-output name=tag::${GITHUB_REF#refs/tags/}\""
+      - uses: actions/cache@v2
+        with:
+          path: |
+            docker-cache
+          key: ${{ runner.os }}-docker-cache-${{ steps.determine-tag.outputs.tag }}
+      - run: docker load < docker-cache/converter.tar
+      - run: docker tag neto123/converter neto123/converter:${{ steps.determine-tag.outputs.tag }}
