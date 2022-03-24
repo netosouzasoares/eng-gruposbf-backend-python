@@ -74,6 +74,19 @@ make cov
 ```
 
 
+## Build and Run Docker
+
+Run command:
+
+```
+make docker-build
+```
+
+```
+make docker-run
+```
+
+
 ##  Model examples to requests
 
 ```

@@ -7,7 +7,7 @@ import logging
 def get_coins_values():
 
     try:
-        result = requests.get(settings['awesomea_pi'])
+        result = requests.get(settings['awesomea_api'])
         response = result.json()
         return {
             'USD': float(response['USDBRL']['bid']),
