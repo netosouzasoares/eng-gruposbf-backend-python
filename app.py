@@ -6,7 +6,7 @@ import converter.api as awesomeapi
 
 app = Flask(__name__)
 
-### swagger specific ###
+# swagger specific
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
 SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
@@ -16,7 +16,9 @@ SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
         'app_name': "Converter"
     }
 )
+
 app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
+
 
 @app.route('/healthcheck', methods=['GET'])
 def healthcheck():
@@ -31,7 +33,6 @@ def converter():
 
     if 'price' not in data:
         return 'Field price is required on body', 400
-
 
     if not type(data['price']) == float and not type(data['price']) == int:
         return 'Field price is invalid', 400
