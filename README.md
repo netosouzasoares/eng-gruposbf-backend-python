@@ -121,8 +121,7 @@ See the [opened issues](https://github.com/netosouzasoares/eng-gruposbf-backend-
 
 We used the lib https://locust.io to a simple test running our app on minikube locally
 
-![result](/scripts/result/report_1648139919.9923043.html)
-
+You can see the simple results executed opening the file `report_24-03.html` on your broswer
 
 ## How to execute performance test
 
