@@ -15,6 +15,8 @@ dynaconf = "==3.1.7"
 setuptools = "==60.10.0"
 gunicorn = "==20.1.0"
 flask-swagger-ui = "==3.36.0"
+sentry-sdk = {extras = ["flask"],version = "*"}
+newrelic = "==7.6.0.173"
 
 [dev-packages]
 

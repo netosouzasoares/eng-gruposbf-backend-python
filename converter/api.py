@@ -1,12 +1,12 @@
 from urllib.error import HTTPError
-from dynaconf import settings
+from converter.utils import get_settings
 
 import logging
 import requests
 
 
 def get_coins_values():
-
+    settings = get_settings()
     try:
         result = requests.get(settings['awesomea_api'])
         response = result.json()

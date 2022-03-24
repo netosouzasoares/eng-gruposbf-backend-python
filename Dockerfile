@@ -10,6 +10,8 @@ RUN pip install --upgrade pip \
 RUN pipenv install --system
 COPY . .
 
+ENV NEW_RELIC_CONFIG_FILE newrelic.ini
+
 EXPOSE 5000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--access-logfile", "-", "wsgi"]
+CMD ["newrelic-admin", "run-program", "gunicorn", "--bind", "0.0.0.0:5000", "--access-logfile", "-", "wsgi"]
