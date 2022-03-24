@@ -107,3 +107,8 @@ To edit use https://www.draw.io/ and open docs/architecture.xml
 ## How to Deploy:
 
 TODO: explain how deploy on k8s
+
+
+## How Contribute
+
+See the [opened issues](https://github.com/netosouzasoares/eng-gruposbf-backend-python/issues)
