@@ -18,6 +18,7 @@ flask-swagger-ui = "==3.36.0"
 sentry-sdk = {extras = ["flask"],version = "*"}
 newrelic = "==7.6.0.173"
 
+
 [dev-packages]
 
 [requires]
