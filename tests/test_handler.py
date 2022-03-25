@@ -24,3 +24,8 @@ def test_should_format_price():
 def test_should_format_price_inr():
     result = handler.format_value(0.06326)
     assert result == '0.06'
+
+
+def test_should_format_price_real():
+    result = handler.format_value(300.212121)
+    assert result == '300.21'
