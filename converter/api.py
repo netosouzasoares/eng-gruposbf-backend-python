@@ -1,7 +1,6 @@
 from urllib.error import HTTPError
-from converter.utils import get_settings
+from converter.utils import get_settings, get_logging
 
-import logging
 import requests
 
 
@@ -16,5 +15,5 @@ def get_coins_values():
             'INR': float(response['INRBRL']['bid'])
         }
     except HTTPError:
-        logging.error('get error from awesomeapi')
+        get_logging().error('error from awesomea api')
         return None
