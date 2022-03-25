@@ -78,4 +78,5 @@ jobs:
             docker-cache
           key: ${{ runner.os }}-docker-cache-${{ steps.determine-tag.outputs.tag }}
       - run: docker load < docker-cache/converter.tar
-      - run: docker tag neto123/converter neto123/converter:${{ steps.determine-tag.outputs.tag }}
+      - run: docker tag neto123/converter neto123/converter:${{ steps.determine-tag.outputs.tag }} neto123/converter:latest
+      - run: docker push neto123/converter:${{ steps.determine-tag.outputs.tag }} && docker push neto123/converter:latest

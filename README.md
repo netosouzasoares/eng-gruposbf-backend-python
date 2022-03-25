@@ -110,6 +110,9 @@ To edit use https://www.draw.io/ and open docs/architecture.xml
 
 1. Create a PR with your changes
 2. Merge to master after approve and build
+
+To create a new release is important to know about [Semantic Version](http://semver.org/), our tags is based on it with format `vX.X.X` .
+
 3. Create a release on github, after that github actions will push image to dockerhub (now image is public to tests, but to internal company we can create a private repository on dockerhub/ecr e etc...)
 
 
