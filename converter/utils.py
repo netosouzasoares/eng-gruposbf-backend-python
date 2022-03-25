@@ -14,5 +14,5 @@ def get_settings():
 
 
 def get_logging():
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)s %(levelname)s:%(message)s')
+    logging.basicConfig(format='%(asctime)s %(name)s %(levelname)s:%(message)s')
     return logging

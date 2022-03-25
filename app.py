@@ -49,11 +49,11 @@ def converter():
         return 'Field price is required on body', 400
 
     if not type(data['price']) == float and not type(data['price']) == int:
-        get_logging().warning('Field price is invalid')
+        get_logging().warning('Field price is invalid - field: "{}"'.format(data['price']))
         return 'Field price is invalid', 400
 
     if data['price'] <= 0:
-        get_logging().warning('Field price is negative or 0')
+        get_logging().warning('Field price is negative or zero - field: "{}"'.format(data['price']))
         return 'Field price is invalid', 400
 
     return orchestrator(data)
