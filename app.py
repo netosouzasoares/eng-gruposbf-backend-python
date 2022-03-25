@@ -1,6 +1,6 @@
 import sentry_sdk
 
-from flask import Flask, request
+from flask import Flask, request, redirect
 from flask_swagger_ui import get_swaggerui_blueprint
 
 from converter.config_handler import config_handler
@@ -26,6 +26,11 @@ SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
 )
 
 app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
+
+
+@app.route('/')
+def root():
+    return redirect('/swagger')
 
 
 @app.route('/healthcheck', methods=['GET'])
