@@ -12,19 +12,19 @@ Converter API...
 # Built With
 
 - [Python](https://www.python.org/) 3.9
-- [Pytest] (https://docs.pytest.org/en/7.1.x/#) 7.1.1
-- [Pytest-Cov] (https://pytest-cov.readthedocs.io/en/latest/readme.html) 3.0.0
+- [Pytest](https://docs.pytest.org/en/7.1.x/#) 7.1.1
+- [Pytest-cov](https://pytest-cov.readthedocs.io/en/latest/readme.html) 3.0.0
 - [Requests](https://docs.python-requests.org/en/latest/) 2.27.1
-- [newrelic](https://newrelic.com) 7.6.0.173
+- [Newrelic](https://newrelic.com) 7.6.0.173
 - [Mock](https://mock.readthedocs.io/en/latest/) 4.0.3
 - [Toml](https://github.com/uiri/toml) 0.10.2
 - [Gunicorn](https://gunicorn.org) 20.1.0
 - [Sentry](https://github.com/getsentry/sentry-python) 1.5.8
 - [Flask](http://flask.pocoo.org/) 2.0.3
 - [Flake8](http://flake8.pycqa.org/en/latest/) 4.0.1
-- [dynaconf](https://github.com/rochacbruno/dynaconf) 3.1.7
-- [flask-swagger-ui](https://github.com/sveint/flask-swagger-ui) 3.36.0
-- [awesomeapi](https://docs.awesomeapi.com.br)
+- [Dynaconf](https://github.com/rochacbruno/dynaconf) 3.1.7
+- [Flask-swagger-ui](https://github.com/sveint/flask-swagger-ui) 3.36.0
+- [Awesomeapi](https://docs.awesomeapi.com.br)
 
 # Run development
 
