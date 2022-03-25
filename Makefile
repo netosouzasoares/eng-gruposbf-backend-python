@@ -2,7 +2,7 @@ lint:
 	pipenv run flake8 .
 
 cov:
-	pipenv run pytest --cov-fail-under 68 --cov converter
+	pipenv run pytest --cov-fail-under 88 --cov converter
 
 test:
 	pipenv run pytest
