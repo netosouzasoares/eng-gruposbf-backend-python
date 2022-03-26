@@ -94,7 +94,7 @@ and then run with `docker run {IMAGE NAME}`
 ```
   {
 
-    "price": 100,29,
+    "price": 100,29
   }
 ```
 

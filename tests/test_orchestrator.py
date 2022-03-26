@@ -10,7 +10,7 @@ def test_should_return_values():
         assert status == 200
 
 
-def test_should_return_error():
+def test_should_return_error_if_api_returns_none():
     with mock.patch('converter.api.get_coins_values', return_value=None):
         result, status = orchestrator({'price': 300})
         assert result == 'Internal Error'
