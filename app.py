@@ -14,7 +14,6 @@ if settings['env'].lower() == 'prod':
 
 app = Flask(__name__)
 
-# swagger specific
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
 SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
