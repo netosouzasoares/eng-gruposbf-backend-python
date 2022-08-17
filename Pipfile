@@ -16,7 +16,7 @@ setuptools = "==60.10.0"
 gunicorn = "==20.1.0"
 flask-swagger-ui = "==3.36.0"
 sentry-sdk = {extras = ["flask"],version = "==1.5.8"}
-newrelic = "==7.6.0.173"
+newrelic = "==8.0.0.179"
 
 
 [dev-packages]
