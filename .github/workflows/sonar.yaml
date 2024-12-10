@@ -33,5 +33,3 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v4
         env:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-            SONARQUBE_SCANNER_PARAMS: |
-                sonar.python.coverage.reportPaths=coverage.xml
