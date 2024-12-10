@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
         run: make dev-install
-      - name: cov
-        run: make cov
+      - name: Run tox
+        run: tox -e py
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
